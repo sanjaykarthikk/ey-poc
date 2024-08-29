@@ -1,0 +1,22 @@
+.main_container{
+    padding:25px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+.header{
+    flex: 2;
+    background-color: yellow;
+}
+
+.list_container{
+    flex:4;
+    background-color: grey;
+}
+
+.footer{
+    flex: 2;
+    background-color: cornsilk;
+}
