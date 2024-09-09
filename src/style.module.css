@@ -1,0 +1,38 @@
+.main_container{
+    padding:25px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+.header{
+    flex: 2;
+    background-color: yellow;
+}
+
+.list_container{
+    flex:4;
+    background-color: grey;
+}
+
+.footer{
+    flex: 2;
+    background-color: cornsilk;
+}
+
+  
+.profile_pic_div {
+    display: flex;
+    justify-content: flex-end; /* Moves the image to the right */
+  }
+  
+  .profile_pic {
+    width: 50px;   /* Set the desired size for the profile picture */
+    height: 50px;
+    object-fit: cover; /* Makes the image fill the space without distortion */
+    border-radius: 50%; /* Circular image */
+    border: 2px solid #ccc; /* Optional border */
+    margin-left: 80%;
+    margin-top: 5px;
+  }

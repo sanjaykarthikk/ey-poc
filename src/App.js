@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import s from "./style.module.css";
+import profilePic from "./assets/Images/profile_pic.jpg";
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={s.main_container}>
+      <div className={s.header}>
+        <div className="row">
+          <div className="col-4">
+            <div>LOGO</div>
+            <div>Subtitle</div>
+          </div>
+          <div className="col-md-12 col-lg-4">
+            <input style={{ width: "100%", marginTop: "10px" }} type="text" />
+          </div>
+          <div className="col-4 profile_pic_div">
+            <img
+              src={profilePic}
+              alt="Profile Picture"
+              className={s.profile_pic}
+            />
+          </div>
+        </div>
+      </div>
+      <div className={s.list_container}>List Container</div>
+      <div className={s.footer}> Footer </div>
     </div>
   );
 }
-
-export default App;
