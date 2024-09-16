@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "name": "Project Alpha",
+      "description": "A great project focused on React and Redux.",
+      "skills": ["React", "Redux"]
+    },
+    {
+      "id": 2,
+      "name": "Project Beta",
+      "description": "This project is centered on Node.js and Express.",
+      "skills": ["Node", "Express"]
+    }
+  ]
+  

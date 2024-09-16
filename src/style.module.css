@@ -1,0 +1,52 @@
+/* src/style.module.css */
+.appContainer {
+  background-color: #f3f2ef;
+  min-height: 100vh;
+}
+
+
+
+
+.projectList {
+  padding: 20px;
+  max-height: 70vh;
+}
+
+.projectItem {
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+}
+
+.projectPage {
+  padding: 40px;
+}
+
+
+.homePage {
+  padding: 20px;
+}
+/* ============================================ */
+/* Add custom styles if needed */
+.header {
+  background-color: #333; /* Customize header background */
+}
+
+.logo {
+  font-size: 1.5rem; /* Customize font size */
+}
+
+.searchCol {
+  max-width: 600px; /* Limit the search box width */
+}
+
+.searchBox {
+  max-width: 100%; /* Ensure it fills available space */
+}
+
+.profilePic {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
