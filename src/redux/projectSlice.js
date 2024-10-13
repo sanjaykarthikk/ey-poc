@@ -13,29 +13,48 @@ export const fetchProjects = createAsyncThunk(
   }
 );
 
+// Define initial state
+const initialState = {
+  projects: [],
+  status: "idle", // 'idle' | 'loading' | 'succeeded' | 'failed'
+  error: null,
+};
+
 // Create the project slice
 const projectSlice = createSlice({
   name: "projects",
-  initialState: {
-    projects: [],
-    status: "idle",
-    error: null,
+  initialState,
+  reducers: {
+    setLoading(state) {
+      state.status = "loading"; // Set loading status
+    },
+    setProjects(state, action) {
+      state.status = "succeeded"; // Set succeeded status
+      state.projects = action.payload; // Update projects with fetched data
+    },
+    setError(state, action) {
+      state.status = "failed"; // Set failed status
+      state.error = action.payload; // Set error message
+    },
   },
-  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchProjects.pending, (state) => {
-        state.status = "loading";
+        state.status = "loading"; // Set loading status
       })
       .addCase(fetchProjects.fulfilled, (state, action) => {
-        state.status = "succeeded";
+        state.status = "succeeded"; // Set succeeded status
         state.projects = action.payload; // Update projects with fetched data
       })
       .addCase(fetchProjects.rejected, (state, action) => {
-        state.status = "failed";
-        state.error = action.error.message;
+        state.status = "failed"; // Set failed status
+        state.error = action.error.message; // Set error message
       });
   },
 });
 
-export default projectSlice.reducer;
+// Export actions
+export const { setLoading, setProjects, setError } = projectSlice.actions;
+
+// Export the async thunk
+export default projectSlice.reducer; // Export the reducer

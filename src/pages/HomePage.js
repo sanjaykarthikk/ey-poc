@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProjects } from "../redux/projectSlice";
+import { fetchProjects } from "../redux/projectSlice"; // Correct import
 import ProjectList from "../components/ProjectList";
 
 const HomePage = () => {

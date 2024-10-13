@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Form } from "react-bootstrap";
-import s from "../style.module.css"; // Ensure this path is correct
+import s from "../style.module.css";
+import profilePic from "../assets/profile_pic.jpg";
 
 const Header = () => {
   return (
@@ -23,7 +24,7 @@ const Header = () => {
           </Col>
           <Col xs={3} lg={2} className={`text-end ${s.profilePicCol}`}>
             <img
-              src="https://via.placeholder.com/40"
+              src={profilePic}
               alt="Profile"
               className={`rounded-circle ${s.profilePic}`}
             />
